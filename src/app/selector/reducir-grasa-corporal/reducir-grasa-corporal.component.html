@@ -1,0 +1,20 @@
+<div class="w-100 h-100">
+    <h2>Reducir grasa</h2>
+   
+    <div *ngIf="!nivelSeleccionado; else video" class="d-flex flex-column">
+        <img class="img-fluid mb-3" src="https://img.odioentrenar.com/odioentrenar/perder-peso-reducir-grasa-abdominal.jpg">
+        <button (click)="nivelSeleccionado = nivel" *ngFor="let nivel of niveles" class="btn btn-primary mb-2">
+            Nivel {{nivel.numero}}
+        </button>
+
+        <button routerLink="../selector" class="btn btn-secondary mt-2">Atrás</button>
+    </div>
+
+    <ng-template #video>
+        <h4>Nivel {{nivelSeleccionado.numero}}</h4>
+        <iframe src="https://www.youtube.com/embed/JW1ctXVM4og"></iframe>
+        <button (click)="nivelSeleccionado = null" class="btn btn-secondary mt-3">Atrás</button>
+        
+    </ng-template>
+
+</div>

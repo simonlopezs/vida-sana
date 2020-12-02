@@ -1,3 +1,4 @@
+import { GanarMusculaturaComponent } from './selector/ganar-musculatura/ganar-musculatura.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
@@ -5,15 +6,19 @@ import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SelectorComponent } from './selector/selector.component';
+import { EstadoAnimoComponent } from './selector/estado-animo/estado-animo.component';
+import { ReducirGrasaCorporalComponent } from './selector/reducir-grasa-corporal/reducir-grasa-corporal.component';
+import { GanarResistenciaComponent } from './selector/ganar-resistencia/ganar-resistencia.component';
+import { SafePipe } from './safe.pipe';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent},
-  { path: 'selector', component: SelectorComponent }
-  // { path: 'estado-animo', component:  },
-  // { path: 'reducir-grasa', component: SecondComponent },
-  // { path: 'musculatura', component: SecondComponent },
-  // { path: 'resistencia', component: SecondComponent },
+  { path: 'selector', component: SelectorComponent },
+  { path: 'estado-animo', component: EstadoAnimoComponent },
+  { path: 'reducir-grasa', component: ReducirGrasaCorporalComponent },
+  { path: 'ganar-musculatura', component: GanarMusculaturaComponent },
+  { path: 'ganar-resistencia', component: GanarResistenciaComponent },
 ]
 
 
@@ -21,7 +26,12 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    SelectorComponent
+    SelectorComponent,
+    EstadoAnimoComponent,
+    ReducirGrasaCorporalComponent,
+    GanarMusculaturaComponent,
+    GanarResistenciaComponent,
+    SafePipe
   ],
   imports: [
     RouterModule.forRoot(routes),
