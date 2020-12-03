@@ -12,7 +12,7 @@
 
     <ng-template #video>
         <h4>Nivel {{nivelSeleccionado.numero}}</h4>
-        <iframe src="https://www.youtube.com/embed/JW1ctXVM4og"></iframe>
+        <iframe [src]="nivelSeleccionado.videoUrl | safe"></iframe>
         <button (click)="nivelSeleccionado = null" class="btn btn-secondary mt-3">Atrás</button>
         
     </ng-template>
