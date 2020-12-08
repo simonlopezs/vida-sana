@@ -3,15 +3,15 @@
     height: 180px!important;
     margin-bottom: 10px;
 }
-
+/* 
 body {
     background: rgb(25, 87, 153);
     background: linear-gradient(0deg, rgba(25, 87, 153, 1) 0%, rgba(32, 134, 188, 1) 100%);
-}
+} */
 
 * {
     font-family: 'Titillium Web', sans-serif;
-    color: white;
+    /* color: white; */
 }
 
 p, b {
@@ -19,7 +19,7 @@ p, b {
 }
 
 h4 {
-    /* color: rgb(19, 120, 214); */
+    color: rgb(19, 120, 214);
     font-weight: 700!important;
 }
 

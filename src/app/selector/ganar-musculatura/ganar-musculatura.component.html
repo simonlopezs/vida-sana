@@ -6,11 +6,11 @@
             <img class="img-fluid"
                 src="https://imageresizer.static9.net.au/3d4o9c3c-6YVSSSM96IWp2AmlbE=/600x338/smart/https%3A%2F%2Fprod.static9.net.au%2F_%2Fmedia%2FNetwork%2FImages%2F2018%2F07%2F07%2F13%2F08%2F180707_coach_bicep.jpg">
         </div>
-        <button (click)="nivelSeleccionado = nivel" *ngFor="let nivel of niveles" class="btn btn-outline-light mb-2">
+        <button (click)="nivelSeleccionado = nivel" *ngFor="let nivel of niveles" class="btn btn-success mb-2">
             Nivel {{nivel.numero}}
         </button>
 
-        <button routerLink="../selector" class="btn btn-danger mt-2">Atrás</button>
+        <button routerLink="../selector" class="btn btn-danger">Atrás</button>
     </div>
 
     <ng-template #video>
