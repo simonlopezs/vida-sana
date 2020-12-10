@@ -3,11 +3,10 @@
     height: 180px!important;
     margin-bottom: 10px;
 }
-/* 
+
 body {
-    background: rgb(25, 87, 153);
-    background: linear-gradient(0deg, rgba(25, 87, 153, 1) 0%, rgba(32, 134, 188, 1) 100%);
-} */
+    background: rgb(247, 247, 247)!important
+}
 
 * {
     font-family: 'Titillium Web', sans-serif;

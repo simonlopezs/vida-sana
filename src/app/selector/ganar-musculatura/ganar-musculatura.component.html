@@ -1,25 +1,2 @@
-<div class="w-100 h-100">
-    <h2>Ganar musculatura</h2>
-
-    <div *ngIf="!nivelSeleccionado; else video" class="d-flex flex-column">
-        <div class="img-wrapper">
-            <img class="img-fluid"
-                src="https://imageresizer.static9.net.au/3d4o9c3c-6YVSSSM96IWp2AmlbE=/600x338/smart/https%3A%2F%2Fprod.static9.net.au%2F_%2Fmedia%2FNetwork%2FImages%2F2018%2F07%2F07%2F13%2F08%2F180707_coach_bicep.jpg">
-        </div>
-        <button (click)="nivelSeleccionado = nivel" *ngFor="let nivel of niveles" class="btn btn-success mb-2">
-            Nivel {{nivel.numero}}
-        </button>
-
-        <button routerLink="../selector" class="btn btn-danger">Atrás</button>
-    </div>
-
-    <ng-template #video>
-        <h4>Nivel {{nivelSeleccionado.numero}}</h4>
-        <b>{{textoActividad(actividad)[0]}}</b>
-        <p>{{textoActividad(actividad)[1]}}</p>
-        <iframe [src]="nivelSeleccionado.videoUrl | safe"></iframe>
-        <button (click)="nivelSeleccionado = null" class="btn btn-danger mt-3">Atrás</button>
-
-    </ng-template>
-
-</div>
+<page-layout titulo="Ganar musculatura" image="https://imageresizer.static9.net.au/3d4o9c3c-6YVSSSM96IWp2AmlbE=/600x338/smart/https%3A%2F%2Fprod.static9.net.au%2F_%2Fmedia%2FNetwork%2FImages%2F2018%2F07%2F07%2F13%2F08%2F180707_coach_bicep.jpg" [niveles]="niveles">
+</page-layout>

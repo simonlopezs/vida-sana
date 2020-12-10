@@ -1,13 +1,15 @@
-<div class="text-center mb-5">
-    <h2>Bienvenido</h2>
-    <h5 class="mb-3">Elige tu objetivo</h5>
-</div>
-
-<div class="d-flex flex-column">
-    <button *ngFor="let modulo of modulos" routerLink="{{modulo.ruta}}" class="btn btn-success btn-block mb-2">
-    {{modulo.titulo}}
-    </button>
-
-    <button routerLink="../login" class="btn btn-danger mt-2">Salir</button>
-
+<div class="d-flex flex-column justify-content-center" style="height: 100vh">
+    <div class="text-center mb-5">
+        <h2>Bienvenido</h2>
+        <h5 class="mb-3">Elige tu objetivo</h5>
+    </div>
+    
+    <div class="d-flex flex-column">
+        <button *ngFor="let modulo of modulos" routerLink="{{modulo.ruta}}" class="btn btn-success btn-block mb-2">
+        {{modulo.titulo}}
+        </button>
+    
+        <button routerLink="../login" class="btn btn-danger mt-2">Salir</button>
+    
+    </div>
 </div>

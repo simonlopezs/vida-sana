@@ -1,26 +1,2 @@
-<div class="w-100 h-100">
-
-        <h2>Mejorar estado de ánimo</h2>
-       
-        <div *ngIf="!nivelSeleccionado; else video" class="d-flex flex-column">
-            <div class="img-wrapper">
-                <img class="img-fluid" src="https://bradaronson.com/wp-content/uploads/2013/10/happy.jpg">
-            </div>
-            <button (click)="nivelSeleccionado = nivel" *ngFor="let nivel of niveles" class="btn btn-success mb-2">
-                Nivel {{nivel.numero}}
-            </button>
-      
-            <button routerLink="../selector" class="btn btn-danger">Atrás</button>
-        </div>
-      
-        <ng-template #video>
-            <h4>Nivel {{nivelSeleccionado.numero}}</h4>
-            <b>{{textoActividad(actividad)[0]}}</b>
-            <p>{{textoActividad(actividad)[1]}}</p>
-            <iframe [src]="nivelSeleccionado.videoUrl | safe"></iframe>
-            <button (click)="nivelSeleccionado = null" class="btn btn-danger mt-3">Atrás</button>
-            
-        </ng-template>
-
-
-</div>
+<page-layout titulo="Mejorar estado de ánimo" image="https://bradaronson.com/wp-content/uploads/2013/10/happy.jpg" [niveles]="niveles">
+</page-layout>

@@ -10,6 +10,7 @@ import { EstadoAnimoComponent } from './selector/estado-animo/estado-animo.compo
 import { ReducirGrasaCorporalComponent } from './selector/reducir-grasa-corporal/reducir-grasa-corporal.component';
 import { GanarResistenciaComponent } from './selector/ganar-resistencia/ganar-resistencia.component';
 import { SafePipe } from './safe.pipe';
+import { PageLayoutComponent } from './selector/page-layout/page-layout.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -31,7 +32,8 @@ const routes: Routes = [
     ReducirGrasaCorporalComponent,
     GanarMusculaturaComponent,
     GanarResistenciaComponent,
-    SafePipe
+    SafePipe,
+    PageLayoutComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
